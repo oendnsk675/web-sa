@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/loader.css" rel="stylesheet">
+    <link href="./dist/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-secondary to-secondary2 h-screen smx:h-full relative pb-8">
+    <header>
+        <nav class="w-full flexbg-secondary2 bg-opacity-30 items-center px-64 smx:px-4 p-4">
+            <!-- logo -->
+            <a href="" class="flex items-end gap-3">
+                <div class="bg-stone-100 p-1 rounded-md">
+                    <svg id="logo_os" data-name="logo os" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 35.037 30.041">
+                        <defs>
+                            <linearGradient id="linear-gradient" x1="-0.136" y1="0.45" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#9374ec" stop-opacity="0.302"/>
+                            <stop offset="1" stop-color="#3106ab"/>
+                            </linearGradient>
+                        </defs>
+                        <path id="Path_5" data-name="Path 5" d="M59.96,0H43V5.653H59.96v5.653h5.653V0Z" transform="translate(-37.347)" fill="url(#linear-gradient)"/>
+                        <path id="Path_6" data-name="Path 6" d="M0,48.653v16.96H16.96V59.96H5.653V43H0Z" transform="translate(0 -37.347)" fill="url(#linear-gradient)"/>
+                        <path id="Path_7" data-name="Path 7" d="M155.328,105.719v-5.653h-5.588V100h-5.653v11.241H138.5v5.653h11.307v-5.653h-.066v-5.522Z" transform="translate(-120.291 -86.853)" fill="#151513"/>
+                        </svg>
+                </div>
+                <span class="font-sans-pro font-semibold text-2xl text-stone-50">OsLab</span>
+            </a>
+            <!-- /logo -->
+        </nav>
+
+    </header>
+    <hr class="opacity-50">
+    <!-- information -->
+    <section class="mt-6 w-full flex justify-center gap-5">
+        <div class="flex flex-col items-center w-16 justify-between p-2 bg-slate-50 bg-opacity-20 border rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-red-400 fill-current" width="25" viewBox="0 0 24 24"><path d="M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm0-2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 6c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zm0-2c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 4c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2z"/></svg>
+
+            <span class="flex flex-col items-center">
+                <span class="text-slate-50 text-xs" id="hit_counter">?</span>
+                <span class="text-slate-50 text-xs opacity-50">Hits</span>
+            </span>
+        </div>
+
+        <div class="flex flex-col items-center w-16 justify-between p-2 bg-slate-50 bg-opacity-20 border rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-lime-200 fill-current" width="23" viewBox="0 0 24 24"><path d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"/></svg>
+
+            <span class="flex flex-col items-center">
+                <span class="text-slate-50 text-xs" id="user_counter">?</span>
+                <span class="text-slate-50 text-xs opacity-50">Users</span>
+            </span>
+        </div>
+    </section>
+    <!-- information -->
+
+    <main class="mt-8 smx:mt-14 w-full px-64 smx:px-5">
+        <div class="w-full">
+            <form action="" id="analyze" method="post">
+                <div class="flex justify-center w-full gap-5">
+                    <input id="query" name="query" type="text" class="bg-transparent focus:outline-none w-full border-b p-2 text-2xl rounded-xl font-sans-pro font-semibold text-white placeholder-white placeholder-opacity-50" placeholder="Search tweet ..">
+                    <button type="submit" class="bg-secondary2 bg-opacity-70 rounded-lg p-1 px-3 font-sans-pro font-semibold text-stone-50 hover:opacity-70 transition-opacity duration-300">Analyze</button>
+                </div>
+            </form>
+        </div>
+
+        <h2 class="text-2xl text-white font-semibold my-4 text-center w-full">Result</h2>
+        <div class="w-full flex smx:flex-col justify-center gap-11 smx:gap-4 smx:mt-11">
+            <div class="w-[20%] transform hover:rotate-6 transition-all duration-300 smx:w-full p-4 flex flex-col items-center justify-between bg-white shadow-emerald-100 bg-opacity-10 border-b border-r border-secondary2 rounded-3xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-lime-300 fill-current" width="90" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.508 13.941c-1.513 1.195-3.174 1.931-5.507 1.931-2.335 0-3.996-.736-5.509-1.931l-.492.493c1.127 1.72 3.2 3.566 6.001 3.566 2.8 0 4.872-1.846 5.999-3.566l-.492-.493zm.492-3.939l-.755.506s-.503-.948-1.746-.948c-1.207 0-1.745.948-1.745.948l-.754-.506c.281-.748 1.205-2.002 2.499-2.002 1.295 0 2.218 1.254 2.501 2.002zm-7 0l-.755.506s-.503-.948-1.746-.948c-1.207 0-1.745.948-1.745.948l-.754-.506c.281-.748 1.205-2.002 2.499-2.002 1.295 0 2.218 1.254 2.501 2.002z"/></svg>
+
+                <span class="flex flex-col items-center mt-3">
+                    <span class="text-slate-50 text-base font-semibold" id="positive">?</span>
+                    <span class="text-slate-50 text-base font-semibold">Positive</span>
+                </span>
+            </div>
+
+            <div class="w-[20%] transform hover:rotate-6 transition-all duration-300 smx:w-full p-4 flex flex-col items-center justify-between bg-white shadow-emerald-100 bg-opacity-10 border-b border-r border-secondary2 rounded-3xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-lime-100 fill-current" width="90" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4 17h-8v-2h8v2zm-7.5-9c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5z"/></svg>
+
+                <span class="flex flex-col items-center mt-3">
+                    <span class="text-slate-50 text-base font-semibold" id="netral">?</span>
+                    <span class="text-slate-50 text-base font-semibold">Netral</span>
+                </span>
+            </div>
+
+            <div class="w-[20%] transform hover:rotate-6 transition-all duration-300 smx:w-full p-4 flex flex-col items-center justify-between bg-white shadow-emerald-100 bg-opacity-10 border-b border-r border-secondary2 rounded-3xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-red-300 fill-current" width="90" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.5 8c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm-.941 9.94c-.903-.19-1.741-.282-2.562-.282-.819 0-1.658.092-2.562.282-1.11.233-1.944-.24-2.255-1.015-.854-2.131 1.426-3.967 4.816-3.967 3.537 0 5.666 1.853 4.817 3.968-.308.769-1.136 1.249-2.254 1.014zm-2.563-1.966c1.614 0 3.056.67 3.206.279.803-2.079-7.202-2.165-6.411 0 .138.377 1.614-.279 3.205-.279z"/></svg>
+
+                <span class="flex flex-col items-center mt-3">
+                    <span class="text-slate-50 text-base font-semibold" id="negative">?</span>
+                    <span class="text-slate-50 text-base font-semibold">Negative</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="w-full flex mt-12">
+            <div class="w-full rounded-lg p-2 border py-3">
+                <p class="font-sans-pro font-semibold text-stone-50"><b>Interpretasi  : </b> <span class="font-light" id="summary">..</span> </p>
+            </div>
+        </div>
+        
+    </main>
+
+    <div class="loader-div z-index-lowwer transition-all flex flex-col duration-300" style="opacity: 0;">
+        <span class="loader mb-5">
+            <span></span>
+            <span></span>
+        </span>
+        <div class="block font-semibold text-[#29c8bb] text-lg">Wait for a second</div>
+    </div>
+    
+    <script src="./dist/js/jquery.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./dist/js/script.js"></script>
+    <script type="module">
+        // Initialize the agent at application startup.
+        // You can also use https://openfpcdn.io/fingerprintjs/v3/esm.min.js
+        let base_url = 'https://cos-lab.herokuapp.com'
+        const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
+          .then(FingerprintJS => FingerprintJS.load())
+      
+        // Get the visitor identifier when you need it.
+        fpPromise
+        .then(fp => fp.get())
+        .then(result => {
+            // result.visitorId
+            // doing ajax to the server, to save uniqe user
+            var settings = {
+                "url": `${base_url}/api/user`,
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                  "data": result.visitorId
+                }),
+              };
+              
+            $.ajax(settings).done(function (response) {
+                $("#user_counter").html(response.size)
+            });
+        })
+
+          
+    </script>
+</body>
+</html>
