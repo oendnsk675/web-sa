@@ -39,7 +39,7 @@
 	height: 5vw;
 	width: 5vw;
 	border-radius: 50%;
-	background-color: rgb(41, 200, 187);
+	background-color: #29c8bb;
 }
 
 .loader span:nth-child(1) {
